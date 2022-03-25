@@ -1,17 +1,30 @@
 import React from 'react';
-import { Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import HomeScreen from '../screens/HomeScreen';
+import TicketScreen from '../screens/TicketScreen';
 import BookingScreen from '../screens/BookingScreen';
 import CancelScreen from '../screens/CancelScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 
+
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const Tab = createBottomTabNavigator();
+const HomeStack = createNativeStackNavigator();
 
+function HomeStackScreen(){
+    return(
+        <HomeStack.Navigator screenOptions={{ headerShown: false }}>
+            <HomeStack.Screen name="HomeScreen" component={HomeScreen}/>
+            <HomeStack.Screen name="TicketScreen" component={TicketScreen}/>
+        </HomeStack.Navigator>
+    );
+}
+
+const Tab = createBottomTabNavigator();
 const BottomTab = ({ navigation}) => {
   return(    
       <Tab.Navigator
@@ -25,24 +38,27 @@ const BottomTab = ({ navigation}) => {
                 borderTopLeftRadius: 30,
                 height: 60,             
                 paddingTop: 10,
+                bottom:0,
             },
             tabBarInactiveTintColor: '#535151',
             tabBarActiveTintColor: '#283593',
+            tabBarHideOnKeyboard: true,
             tabBarLabelStyle: {
                 marginBottom: 5,
-                fontFamily: "Ubuntu-Light",                
+                fontFamily: "Ubuntu-Light",            
+                fontSize:10,
             }
 
          }}
         >
         <Tab.Screen 
             name="Home" 
-            component={HomeScreen}
+            component={HomeStackScreen}
             options={{ 
                 tabBarIcon: ({color}) =>(
                     <Icon 
                     name='home'         
-                    size={25} 
+                    size={20} 
                     color={color}                
                     />
                 )
@@ -53,7 +69,7 @@ const BottomTab = ({ navigation}) => {
                 tabBarIcon: ({color}) =>(
                     <Icon 
                     name='clipboard-list'   
-                    size={25} 
+                    size={20} 
                     color={color}                
                     />
                 )
@@ -64,7 +80,7 @@ const BottomTab = ({ navigation}) => {
                 tabBarIcon: ({color}) =>(
                     <Icon2 
                     name='clipboard-remove'   
-                    size={30} 
+                    size={25} 
                     color={color}                  
                     />
                 )
@@ -75,7 +91,7 @@ const BottomTab = ({ navigation}) => {
                 tabBarIcon: ({color}) =>(
                     <Icon 
                     name='user-alt'   
-                    size={25} 
+                    size={20} 
                     color={color}                   
                     />
                 )

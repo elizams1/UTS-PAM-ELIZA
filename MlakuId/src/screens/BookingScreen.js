@@ -1,33 +1,25 @@
 import React, {Component} from 'react';
 import {
-  //
-  StyleSheet,
-  //
   Text,
-  //
-  SafeAreaView,
-  //
+  SafeAreaView,  
   View,
-  //
-  ScrollView,
-  //
-  TextInput,
-  //
-  TouchableOpacity,  
-  //
+  Pressable,  
+  Image,
   StatusBar, 
 } from 'react-native';
-import styles from '../styles/HomeScreenStyle';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import styles from '../styles/BookingScreenStyle';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const BookingScreen = ({navigation}) => {  
   
   return (
-    <View>
-        <Text>
-            Ini Booking Screen
-        </Text>
-    </View>
+    <>
+      <StatusBar barStyle="light-content" backgroundColor="#283593" />
+      <SafeAreaView style={styles.container}>
+        <Text>Ini booking page</Text>
+        
+      </SafeAreaView>
+    </>
   );
 };
 

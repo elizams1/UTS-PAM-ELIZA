@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     },
     by: {
         marginTop: '130%',
-        fontSize: 16,
+        fontSize: 14,
         color: "#283593",
         fontFamily: "Ubuntu-Light",
     }

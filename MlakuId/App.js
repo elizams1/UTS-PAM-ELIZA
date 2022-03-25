@@ -6,6 +6,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SplashScreen from './src/screens/SplashScreen';
 
 import BottomTab from './src/Components/BottomNavigator';
+import TicketScreen from './src/screens/TicketScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,8 +15,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="SplashScreen" screenOptions={{ headerShown: false }} >
         <Stack.Screen name="BottomTab" component={BottomTab}/>
-        <Stack.Screen name="SplashScreen" component={SplashScreen}/>
-                        
+        <Stack.Screen name="SplashScreen" component={SplashScreen}/>                   
       </Stack.Navigator> 
          
     </NavigationContainer>
