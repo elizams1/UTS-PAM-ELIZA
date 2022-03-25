@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import HomeScreen from '../screens/HomeScreen';
 import TicketScreen from '../screens/TicketScreen';
+import DetailTicketScreen from '../screens/DetailTicketScreen';
 import BookingScreen from '../screens/BookingScreen';
 import CancelScreen from '../screens/CancelScreen';
 import ProfileScreen from '../screens/ProfileScreen';
@@ -20,6 +21,7 @@ function HomeStackScreen(){
         <HomeStack.Navigator screenOptions={{ headerShown: false }}>
             <HomeStack.Screen name="HomeScreen" component={HomeScreen}/>
             <HomeStack.Screen name="TicketScreen" component={TicketScreen}/>
+            <HomeStack.Screen name="DetailTicketScreen" component={DetailTicketScreen}/>
         </HomeStack.Navigator>
     );
 }

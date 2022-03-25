@@ -1,14 +1,15 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({  
-  container: {
-    flex: 1,
+  container: {    
     justifyContent: 'center',
+    height: '85%',
   },
   logoPlace:{
   justifyContent: 'center',
   alignItems: 'center',
-  marginVertical: 20,      
+  marginBottom: 20, 
+  marginTop: 40,     
   },
   logo:{
     width: 155,
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
   },
   harga:{
     flexDirection: "row",
-    justifyContent: "space-arround",
+    justifyContent: "space-between",
   },
   line:{
     backgroundColor: "#283593",
@@ -72,10 +73,11 @@ const styles = StyleSheet.create({
   },
   buttonBack: {    
     paddingHorizontal: 40,
-    paddingVertical: 10,
+    paddingVertical: 5,
     borderRadius: 5,
     borderWidth: 1,
-    borderColor: "#283593",
+    backgroundColor: "#283593",
+    marginTop: 10,
   },
   buttonCont:{
     paddingHorizontal: 40,
@@ -88,16 +90,32 @@ const styles = StyleSheet.create({
     fontSize: 16, 
     color: '#ffff',
   },
-  jadwalNot:{
-      backgroundColor: "#283593",
-      padding: 30,
-      marginHorizontal:20,
-      borderRadius: 10,
+  input: {
+    fontSize: 14,
+    fontFamily: "Ubuntu-Light",
+    borderWidth: 0.8,
+    borderColor: '#283593',
+    borderRadius: 5,
+    color: '#283593',    
+    paddingVertical: 5,    
+    paddingHorizontal: 10,
+    height: 30,
+    width: 325,
+    marginTop:3,        
   },
-  textJadwalNot: {
-    fontSize: 18,
-    fontFamily: "Ubuntu-Bold",
-    color: "#FFFFFF",
+  form:{
+      marginBottom: 10,
+  },
+  textTittleForm:{
+    fontFamily: "Ubuntu-Medium",
+    fontSize: 16, 
+    color: '#283593',
+    marginBottom: 10,
+  },
+  textButton:{
+    fontFamily: "Ubuntu-Medium",
+    fontSize: 16, 
+    color: '#ffff',
     textAlign: "center",
   }
 });

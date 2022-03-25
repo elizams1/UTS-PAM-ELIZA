@@ -16,16 +16,16 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 10, 
   },
-    group: {
+  group: {
     marginBottom: 10,
   },
   search: {
-    marginLeft:15,    
+    paddingHorizontal:5,    
     flexDirection: 'row',        
     alignItems: 'center',
+    justifyContent: 'space-around',
   },
-  title: {
-    marginLeft: 10,
+  title: {    
     marginBottom: 5,
     fontSize: 16,
     fontFamily: "Ubuntu-Medium",
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     paddingVertical: 5,    
     paddingHorizontal: 10,
     height: 30,
-    width: 270,        
+    width: 230,
   },
   buttonSubmit: {
     alignItems: 'center',
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   button: {
     borderRadius: 10,
     padding: 10,
-    width:270,
+    width:180,
     marginBottom:5,    
   },
   buttonOpen: {

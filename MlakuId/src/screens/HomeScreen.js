@@ -26,7 +26,7 @@ const HomeScreen = ({navigation}) => {
     tanggal: '',
     waktu: '',
     penumpang: '',
-    jumlahPenumpang: '',
+    
   })  
   const getText = (nameVar) => {
     return (val) =>{
@@ -68,10 +68,11 @@ const HomeScreen = ({navigation}) => {
   };
 
   const onChangeDate = (event, value) => {
-    setDate(value);
     setIsPickerShow(false);
-    handleText({...text, tanggal: moment.utc(value).format('YYYY-MM-DD')});
+    setDate(value);
+    handleText({...text, tanggal: moment(value).format('YYYY-MM-DD')});
   };
+
 
   //pickerTime
   const [time, isTimePicker] = useState(false);
@@ -287,8 +288,9 @@ const HomeScreen = ({navigation}) => {
                   {!isPickerShow && (
                     <View >
                       <Pressable title="Show Picker" color="purple" onPress={showDatePicker} style={styles.input} >
-                        <Text onPress={showDatePicker} style={styles.inputDateTime}>
-                          {text.tanggal == ""? " " : text.tanggal}
+                        <Text onPress={showDatePicker} style={styles.inputDateTime}> 
+                        {text.tanggal == ""? " " : text.tanggal}
+                          
                         </Text>
                       </Pressable>
                     </View>
