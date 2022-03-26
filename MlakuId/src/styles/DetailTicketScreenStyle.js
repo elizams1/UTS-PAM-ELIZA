@@ -117,6 +117,48 @@ const styles = StyleSheet.create({
     fontSize: 16, 
     color: '#ffff',
     textAlign: "center",
-  }
+  },
+  centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",    
+  },
+  modalView: {
+    backgroundColor: "#fff",
+    borderWidth: 1,
+    borderColor: "#283593",
+    elevation: 5,
+    borderRadius: 10,        
+    padding: 20,
+    width: "80%",
+      
+  },
+  modalText:{
+    fontFamily: "Ubuntu-Medium",
+    fontSize: 16, 
+    color: '#283593',
+    textAlign: "center",
+    marginBottom: 10,
+  },
+  button: {
+    borderRadius: 10,
+    padding: 10,
+    marginBottom:5,
+    justifyContent: "center",
+    alignItems: "center",        
+  },
+  buttonOpen: {
+    backgroundColor: "#fff",
+  },
+  buttonClose: {
+    backgroundColor: "#283593",
+  },
+  buttonModal: {
+    fontFamily: "Ubuntu-Medium",
+    fontSize: 16, 
+    color: '#ffff',    
+    
+  },
+
 });
 export default styles;

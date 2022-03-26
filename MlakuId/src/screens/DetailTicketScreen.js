@@ -109,8 +109,8 @@ const DetailTicketScreen = ({route, navigation}) => {
                     <View style={styles.centeredView}>
                         <View style={styles.modalView}>
                             <Text style={styles.modalText}>PEMBAYARAN</Text>
-                            <Text>LAKUKAN PEMBAYARAN KE NOMOR REKENING 119140002</Text> 
-                            <Text>BANK APA-APA-SENDIRI</Text>
+                            <Text style={styles.modalText}>LAKUKAN PEMBAYARAN KE NOMOR REKENING 119140002</Text> 
+                            <Text style={styles.modalText}>BANK APA-APA-SENDIRI</Text>
                             <Pressable                  
                             value={text.button}        
                             style={[styles.button, styles.buttonClose]}
@@ -119,7 +119,7 @@ const DetailTicketScreen = ({route, navigation}) => {
                     navigation.navigate('HomeScreen')}
                                 }}
                             >
-                            <Text style={styles.textStyle}>OK</Text>
+                            <Text style={styles.buttonModal}>OK</Text>
                             </Pressable>
                         </View>
                     </View>

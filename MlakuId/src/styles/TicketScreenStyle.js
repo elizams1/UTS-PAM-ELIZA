@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   },
   harga:{
     flexDirection: "row",
-    justifyContent: "space-arround",
+    justifyContent: "space-between",
   },
   line:{
     backgroundColor: "#283593",
