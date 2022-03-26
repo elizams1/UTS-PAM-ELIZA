@@ -24,5 +24,5 @@ Aplikasi MlakuID merupakan sebuah Aplikasi yang bertujuan untuk memabntu dalam p
 
 Namun dikarenakan keterbatasan dan kekurangan saya dalam merancang Aplikasi ini maka sedikit banyak terdapat kekurangan dalam perancangan selain itu karena Kesempurnaan merupakan lagu dari rizky febian :). Semoga dari perancangan aplikasi mlakuId yang masih memiliki banyak kekurangan ini saya dapat mengambil pelajarannya seperti belajar menahan lapar karena harus mengerjakan tugas ini. :)
 
-![](src/images/Mlaku.Id.png)
-![](src/images/Mlaku.Id2.png)
+![](MlakuId/src/images/Mlaku.Id.png)
+![](MlakuId/src/images/Mlaku.Id2.png)
