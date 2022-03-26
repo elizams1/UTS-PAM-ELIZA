@@ -13,7 +13,9 @@ import {Jadwal,Harga,Pelabuhan} from '../dataBase/dataBase';
 
 const TicketScreen = ({route, navigation}) => {  
   const data = route.params.text;
-  
+  const keberangkatanId = Pelabuhan.find(item => item.namaPelabuhan == data.keberangkatan).idPelabuhan;
+  const kedatanganId = Pelabuhan.find(item => item.namaPelabuhan == data.kedatangan).idPelabuhan;
+
   const dataNo = () => {
     return (
       <View style={styles.jadwalNot}> 
@@ -25,7 +27,7 @@ const TicketScreen = ({route, navigation}) => {
   };
 
   const dataYes = (pergi) =>{
-    console.log(pergi);
+    
     return(
     <View style={styles.card}>
       <View style={styles.logoPlace}>
@@ -68,13 +70,13 @@ const TicketScreen = ({route, navigation}) => {
       <View style={styles.harga}>
       <Pressable style={styles.buttonBack} 
       onPress={() =>
-              navigation.navigate('HomeScreen')                     
+              {navigation.navigate('HomeScreen')}                     
               }>
-          <Text style={styles.textBasic}>Kembali</Text>
+          <Text style={styles.textButton1}>Kembali</Text>
       </Pressable>
       <Pressable style={styles.buttonCont} 
       onPress={() =>
-              navigation.navigate('DetailTicketScreen',{pergi})                     
+              {navigation.navigate('DetailTicketScreen', {pergi})}                     
               }>
           <Text  style={styles.buttonText1}>Lanjutkan</Text>
       </Pressable>
@@ -85,8 +87,7 @@ const TicketScreen = ({route, navigation}) => {
 
   function RenderData() {
     if (data.keberangkatan !== ''&& data.kedatangan !== ''&& data.layanan !== ''&& data.tanggal !== ''&& data.waktu !== ''&& data.penumpang !== ''){
-        const keberangkatanId = Pelabuhan.find(item => item.namaPelabuhan == data.keberangkatan).idPelabuhan;
-        const kedatanganId = Pelabuhan.find(item => item.namaPelabuhan == data.kedatangan).idPelabuhan;
+        
         const pergi = Jadwal.filter(item => item.keberangkatan == keberangkatanId && item.kedatangan == kedatanganId && item.tanggal == data.tanggal && item.waktu == data.waktu && item.layanan == data.layanan && item.penumpang == data.penumpang);
       
       if (pergi.length== '') {

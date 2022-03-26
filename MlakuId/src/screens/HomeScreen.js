@@ -150,6 +150,15 @@ const HomeScreen = ({navigation}) => {
                           >
                             <Text style={styles.textStyle}>Tanjung Priok</Text>
                           </Pressable>
+                          <Pressable                  
+                            value={text.keberangkatan}        
+                            style={[styles.button, styles.buttonClose]}
+                            onPress={() => {
+                              isPelabuhan('Tanjung Perak')
+                              }}
+                          >
+                            <Text style={styles.textStyle}>Tanjung Perak</Text>
+                          </Pressable>
                         </View>
                       </View>
                     </TouchableWithoutFeedback>                    
@@ -209,6 +218,15 @@ const HomeScreen = ({navigation}) => {
                               }}
                           >
                             <Text style={styles.textStyle}>Tanjung Priok</Text>
+                          </Pressable>
+                          <Pressable                  
+                            value={text.kedatangan}        
+                            style={[styles.button, styles.buttonClose]}
+                            onPress={() => {
+                              isPelabuhanDatang('Tanjung Perak')
+                              }}
+                          >
+                            <Text style={styles.textStyle}>Tanjung Perak</Text>
                           </Pressable>
                         </View>
                       </View>
@@ -441,7 +459,7 @@ const HomeScreen = ({navigation}) => {
                   onPress={() =>
                     navigation.navigate('TicketScreen', {
                       text                   
-                    })                     
+                    })                    
                   }>
                   <Text style={styles.buttonText}>Pesan</Text>
                 </TouchableOpacity>

@@ -10,7 +10,7 @@ const SplashScreen = ({navigation}) => {
   useEffect(() => {
     setTimeout(() => {
         navigation.replace('BottomTab');
-    }, 5000);
+    }, 500);
   }, [navigation]) 
 
   return (

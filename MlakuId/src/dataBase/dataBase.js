@@ -107,6 +107,78 @@ const Jadwal = [
         waktu: '08:00',
         penumpang: '1 Dewasa'
     },
+    {
+        idJadwal: 7,
+        keberangkatan: 2,
+        kedatangan: 1,
+        layanan: 'Ekonomi',
+        tanggal: '2022-03-25',
+        waktu: '08:00',
+        penumpang: '1 Anak-Anak'
+    },
+    {
+        idJadwal: 17,
+        keberangkatan: 2,
+        kedatangan: 1,
+        layanan: 'Ekonomi',
+        tanggal: '2022-03-25',
+        waktu: '08:00',
+        penumpang: '1 Dewasa'
+    },
+    {
+        idJadwal: 8,
+        keberangkatan: 2,
+        kedatangan: 1,
+        layanan: 'Ekonomi',
+        tanggal: '2022-03-26',
+        waktu: '08:00',
+        penumpang: '1 Anak-Anak'
+    },
+    {
+        idJadwal: 18,
+        keberangkatan: 2,
+        kedatangan: 1,
+        layanan: 'Ekonomi',
+        tanggal: '2022-03-26',
+        waktu: '08:00',
+        penumpang: '1 Dewasa'
+    },
+    {
+        idJadwal: 9,
+        keberangkatan: 3,
+        kedatangan: 4,
+        layanan: 'Ekonomi',
+        tanggal: '2022-03-25',
+        waktu: '08:00',
+        penumpang: '1 Anak-Anak'
+    },
+    {
+        idJadwal: 19,
+        keberangkatan: 3,
+        kedatangan: 4,
+        layanan: 'Ekonomi',
+        tanggal: '2022-03-25',
+        waktu: '08:00',
+        penumpang: '1 Dewasa'
+    },
+    {
+        idJadwal: 10,
+        keberangkatan: 4,
+        kedatangan: 3,
+        layanan: 'Ekonomi',
+        tanggal: '2022-03-25',
+        waktu: '10:00',
+        penumpang: '1 Anak-Anak'
+    },
+    {
+        idJadwal: 20,
+        keberangkatan: 4,
+        kedatangan: 3,
+        layanan: 'Ekonomi',
+        tanggal: '2022-03-25',
+        waktu: '10:00',
+        penumpang: '1 Dewasa'
+    },
 ]
 
 const Harga = [
@@ -139,6 +211,10 @@ const Pelabuhan = [
     {
         idPelabuhan: 3,
         namaPelabuhan: 'Tanjung Priok',        
+    },
+    {
+        idPelabuhan: 4,
+        namaPelabuhan: 'Tanjung Perak',        
     },
 ]
 

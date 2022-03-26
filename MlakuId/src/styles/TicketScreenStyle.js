@@ -71,22 +71,30 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   buttonBack: {    
-    paddingHorizontal: 40,
+    width:"40%",
     paddingVertical: 10,
     borderRadius: 5,
     borderWidth: 1,
     borderColor: "#283593",
+    textAlign: "center"
   },
   buttonCont:{
-    paddingHorizontal: 40,
+    width: "40%",
     paddingVertical: 10,
     borderRadius: 5,
     backgroundColor: "#283593"
+  },
+  textButton1:{
+    fontFamily: "Ubuntu-Medium",
+    fontSize: 16, 
+    color: '#283593',
+    textAlign: "center"
   },
   buttonText1:{
     fontFamily: "Ubuntu-Medium",
     fontSize: 16, 
     color: '#ffff',
+    textAlign: "center"
   },
   jadwalNot:{
       backgroundColor: "#283593",

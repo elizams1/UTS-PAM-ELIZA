@@ -71,8 +71,13 @@ const styles = StyleSheet.create({
     height:2,
     marginBottom: 20,
   },
+  buttonPlace:{
+    flexDirection: "row",  
+    justifyContent: "center",
+    marginVertical: 10,
+  },
   buttonBack: {    
-    paddingHorizontal: 40,
+    width:"50%",
     paddingVertical: 5,
     borderRadius: 5,
     borderWidth: 1,
@@ -80,7 +85,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   buttonCont:{
-    paddingHorizontal: 40,
+    width:"30%",
     paddingVertical: 10,
     borderRadius: 5,
     backgroundColor: "#283593"
@@ -101,10 +106,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     height: 30,
     width: 325,
-    marginTop:3,        
+    marginTop:3,
+    width:"100%",        
   },
   form:{
       marginBottom: 10,
+      width:"100%",
   },
   textTittleForm:{
     fontFamily: "Ubuntu-Medium",
@@ -129,9 +136,18 @@ const styles = StyleSheet.create({
     borderColor: "#283593",
     elevation: 5,
     borderRadius: 10,        
-    padding: 20,
+    paddingBottom: 20,
     width: "80%",
       
+  },
+  modalTextHeadline:{
+    fontFamily: "Ubuntu-Medium",
+    fontSize: 16, 
+    color: '#fff',
+    textAlign: "center",
+    marginBottom: 10,
+    backgroundColor: "#283593",
+    padding: 10,
   },
   modalText:{
     fontFamily: "Ubuntu-Medium",
@@ -144,6 +160,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 10,
     marginBottom:5,
+    marginHorizontal: 30,
     justifyContent: "center",
     alignItems: "center",        
   },

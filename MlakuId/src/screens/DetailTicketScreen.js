@@ -18,7 +18,18 @@ import {Jadwal,Harga,Pelabuhan} from '../dataBase/dataBase';
 const DetailTicketScreen = ({route, navigation}) => {  
   const data = route.params.pergi;
 
-  const [text, handleText]= useState({
+  const harga = Harga.find((subItem)=>subItem.layanan === data.layanan).harga;
+  const baru = {
+    keberangkatan: data.keberangkatan,
+    kedatangan: data.kedatangan,
+    layanan: data.layanan,
+    tanggal: data.tanggal,
+    waktu: data.waktu,
+    penumpang: data.penumpang,
+    harga: harga,
+  }
+
+  const [text, handleText]= useState({        
     nama: '',
     jenisKelamin: '',
     umur: '',
@@ -31,7 +42,7 @@ const DetailTicketScreen = ({route, navigation}) => {
       console.log(text);
     }
   }
-
+  
   //modal simpan data
   const [modalData, setModalData]= useState(false);
   const isData = (value) => {
@@ -55,7 +66,7 @@ const DetailTicketScreen = ({route, navigation}) => {
             <Text style={styles.textBasic}>Informasi Pemesanan</Text>
             <View style={styles.subCard}>
               <View style={styles.rute}>
-                <Text style={styles.textBasic}>{Pelabuhan.find((subItem)=>subItem.idPelabuhan == data.keberangkatan).namaPelabuhan}</Text>
+                <Text style={styles.textBasic} onValueChange={getText('keberangkatan')}>{Pelabuhan.find((subItem)=>subItem.idPelabuhan == data.keberangkatan).namaPelabuhan}</Text>                
                 <Icon style={styles.icon} name="arrow-right" size={25} color='#283593'/> 
                 <Text style={styles.textBasic}>{Pelabuhan.find((subItem)=>subItem.idPelabuhan == data.kedatangan).namaPelabuhan}</Text>
               </View>
@@ -108,15 +119,15 @@ const DetailTicketScreen = ({route, navigation}) => {
                     >
                     <View style={styles.centeredView}>
                         <View style={styles.modalView}>
-                            <Text style={styles.modalText}>PEMBAYARAN</Text>
+                            <Text style={styles.modalTextHeadline}>PEMBAYARAN</Text>
                             <Text style={styles.modalText}>LAKUKAN PEMBAYARAN KE NOMOR REKENING 119140002</Text> 
                             <Text style={styles.modalText}>BANK APA-APA-SENDIRI</Text>
                             <Pressable                  
                             value={text.button}        
                             style={[styles.button, styles.buttonClose]}
-                            onPress={() => {
+                            onPress={() => 
                                 {isData('OK'),
-                    navigation.navigate('HomeScreen')}
+                    navigation.navigate('Booking', {baru})
                                 }}
                             >
                             <Text style={styles.buttonModal}>OK</Text>
@@ -125,12 +136,15 @@ const DetailTicketScreen = ({route, navigation}) => {
                     </View>
                 </TouchableWithoutFeedback>                    
             </Modal>
-            <Pressable style={styles.buttonBack} 
-            onPress={() =>
-                    setModalData(true)
-                  }>
-              <Text style={styles.textButton}>Simpan</Text>
-            </Pressable>            
+            <View style={styles.buttonPlace}>
+              <Pressable style={styles.buttonBack} 
+              onPress={() =>
+                      setModalData(true)
+                    }>
+                <Text style={styles.textButton}>Simpan</Text>
+              </Pressable>
+            </View>
+                        
           </View>
 
         </View>

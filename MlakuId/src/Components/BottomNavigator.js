@@ -9,6 +9,8 @@ import DetailTicketScreen from '../screens/DetailTicketScreen';
 import BookingScreen from '../screens/BookingScreen';
 import CancelScreen from '../screens/CancelScreen';
 import ProfileScreen from '../screens/ProfileScreen';
+import HistoryBookingScreen from '../screens/HistoryBookingScreen';
+
 
 
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -18,17 +20,40 @@ const HomeStack = createNativeStackNavigator();
 
 function HomeStackScreen(){
     return(
-        <HomeStack.Navigator screenOptions={{ headerShown: false }}>
+        <HomeStack.Navigator screenOptions={{ headerShown: false }}>           
             <HomeStack.Screen name="HomeScreen" component={HomeScreen}/>
             <HomeStack.Screen name="TicketScreen" component={TicketScreen}/>
-            <HomeStack.Screen name="DetailTicketScreen" component={DetailTicketScreen}/>
+            <HomeStack.Screen name="DetailTicketScreen" component={DetailTicketScreen}/>                       
         </HomeStack.Navigator>
     );
 }
 
+const BookingStack = createNativeStackNavigator();
+function BookingStackScreen(){
+    return(
+        <BookingStack.Navigator screenOptions={{ headerShown: false }}>
+            <BookingStack.Screen name="BookingScreen" component={BookingScreen}/>
+            <BookingStack.Screen name="DetailTicketScreen" component={DetailTicketScreen}/>                       
+        </BookingStack.Navigator>
+    );
+}
+
+const ProfileStack =  createNativeStackNavigator();
+function ProfileStackScreen(){
+    return(
+        <ProfileStack.Navigator screenOptions={{ headerShown: false }}>
+            <ProfileStack.Screen name="ProfileScreen" component={ProfileScreen}/>
+            <ProfileStack.Screen name="HistoryBookingScreen" component={HistoryBookingScreen}/>
+        </ProfileStack.Navigator>
+    )
+}
+
+
 const Tab = createBottomTabNavigator();
 const BottomTab = ({ navigation}) => {
-  return(    
+  return( 
+
+      
       <Tab.Navigator
         screenOptions={{   
             headerShown: false,         
@@ -66,7 +91,7 @@ const BottomTab = ({ navigation}) => {
                 )
              }}
         />
-        <Tab.Screen name="Booking" component={BookingScreen}
+        <Tab.Screen name="Booking" component={BookingStackScreen}
             options={{ 
                 tabBarIcon: ({color}) =>(
                     <Icon 
@@ -88,7 +113,7 @@ const BottomTab = ({ navigation}) => {
                 )
              }}
         />
-        <Tab.Screen name="Profile" component={ProfileScreen}
+        <Tab.Screen name="Profile" component={ProfileStackScreen}
             options={{ 
                 tabBarIcon: ({color}) =>(
                     <Icon 
@@ -99,7 +124,8 @@ const BottomTab = ({ navigation}) => {
                 )
              }}
         />
-      </Tab.Navigator>    
+      </Tab.Navigator> 
+            
   );
 }
 
