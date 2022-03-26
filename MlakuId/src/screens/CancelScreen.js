@@ -10,7 +10,7 @@ import {
   StatusBar, 
 } from 'react-native';
 import styles from '../styles/CancelScreenStyle';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Jadwal,Harga,Pelabuhan} from '../dataBase/dataBase';
 
 const CancelScreen = ({route,navigation}) => {  
